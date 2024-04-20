@@ -9,7 +9,7 @@ const Paginator = ({reports ,setReports, data}:any) => {
     const [lastDigit ,setLastDigit] = useState(0)
 
     const clickHandler = (e: any) => {
-      console.log(e.target.innerText);
+      
       setReports(
         data.slice(
           (e.target.innerText - 1) * perPage,
@@ -20,8 +20,7 @@ const Paginator = ({reports ,setReports, data}:any) => {
 
     useEffect(()=>{
         setReports(data.slice(0,perPage))
-        console.log(reports)
-        console.log(perPage)
+      
     },[perPage])
 
   return (
